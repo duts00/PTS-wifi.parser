@@ -14,11 +14,11 @@ from time import strftime
 
 dic_wf = {}
 dic_wfclient = {}
-arquivo = '/home/matrixs/pentest_wifi/dump-01.kismet.netxml'
+arquivo = '/caminho/para/dump-01.kismet.netxml'
 
 def parse_xml_wf():
-    filetxt = open('/home/matrixs/pentest_wifi/wifi.txt', 'w')
-    filecsv = open('/home/matrixs/pentest_wifi/wifi.csv', 'w')
+    filetxt = open('/caminho/para/wifi.txt', 'w')
+    filecsv = open('/caminho/para/wifi.csv', 'w')
     tree = ET.parse(arquivo)
     root = tree.getroot()
     header = f"{'ESSID':<25} {'BSSID':<20} {'CHANNEL':<8} {'ENC':<10}"
@@ -59,8 +59,8 @@ def parse_xml_wf():
            
 def parse_xml_wf_client():
 
-    filetxt = open('/home/matrixs/pentest_wifi/wifi_clients.txt', 'w')
-    filecsv = open('/home/matrixs/pentest_wifi/wifi_clients.csv', 'w')
+    filetxt = open('/caminho/para/wifi_clients.txt', 'w')
+    filecsv = open('/caminho/para/wifi_clients.csv', 'w')
     tree = ET.parse(arquivo)
     root = tree.getroot()
     header = f"{'ESSID':<25} {'BSSID':<20} {'CLIENTE MAC':<18} {'Cliente EQP':<20} {'Status':<10}"
